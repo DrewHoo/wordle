@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import { letterBoxStyle } from "./InputByCharacter";
 
 export function Guess({ index: guessIndex, word, dispatch }) {
   const onChangeCorrectness = React.useCallback(
@@ -20,13 +21,7 @@ export function Guess({ index: guessIndex, word, dispatch }) {
     <Box
       sx={{
         display: "flex",
-        "& > :not(style)": {
-          m: 1,
-          color: "black",
-          width: "6rem",
-          height: "6rem",
-          fontSize: "5rem",
-        },
+        "& > :not(style)": letterBoxStyle,
       }}
     >
       {Array.from(word).map((letter, i) => (

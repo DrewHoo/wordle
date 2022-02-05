@@ -2,6 +2,17 @@ import { Input } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
+export const letterBoxStyle = {
+  m: 1,
+  color: "#CCC",
+  width: "4.5rem",
+  height: "4.5rem",
+  fontSize: "3.8rem",
+  border: "2px solid #CCC",
+  lineHeight: "unset",
+  boxSizing: "unset"
+};
+
 export function InputByCharacter({ onSubmit }) {
   const ref1 = React.useRef();
   const ref2 = React.useRef();
@@ -59,14 +70,7 @@ export function InputByCharacter({ onSubmit }) {
     <Box
       sx={{
         display: "flex",
-        "& > :not(style)": {
-          m: 1,
-          color: "#CCC",
-          background: "#444",
-          width: "6rem",
-          height: "6rem",
-          fontSize: "5rem",
-        },
+        "& > :not(style)": letterBoxStyle,
       }}
     >
       {refs.map((ref, i) => (

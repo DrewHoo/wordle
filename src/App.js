@@ -67,8 +67,8 @@ function App() {
             <Typography sx={{ color: "black" }}>
               Total possible words: {possibleWords.length}
             </Typography>
-            <Grid container rowSpacing={1} columnSpacing={{ xs: 1 }}>
-              {possibleWords.slice(-100).map((word) => (
+            <Grid container rowSpacing={1} columnSpacing={{ xs: 1 }} style={{maxHeight: '80vh', overflow: 'scroll'}}>
+              {possibleWords.slice(-1000).map((word) => (
                 <Grid item xs={2}>
                   <Item sx={{ color: "black" }}>{word}</Item>
                 </Grid>
