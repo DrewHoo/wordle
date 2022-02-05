@@ -1,5 +1,4 @@
 import "./App.css";
-import { Word } from "./Word";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 
@@ -21,10 +20,10 @@ const Item = styled("div")(({ theme }) => ({
 function App() {
   const [state, dispatch] = React.useReducer(reducer, {});
   const {
-    register,
-    handleSubmit,
+    // register,
+    // handleSubmit,
     watch,
-    formState: { errors },
+    // formState: { errors },
   } = useForm();
   const [guesses, setGuesses] = React.useState([]);
   const onSubmit = React.useCallback(

@@ -1,12 +1,12 @@
 import { fiveLetterWords } from "./wordle";
 
-const exampleObject = {
-  1: {
-    0: { letter: "a", correctness: "included" },
-  },
-};
+// const exampleObject = {
+//   1: {
+//     0: { letter: "a", correctness: "included" },
+//   },
+// };
 
-const exampleLines = [{ letter: "a", badPositions: [0] }];
+// const exampleLines = [{ letter: "a", badPositions: [0] }];
 
 function transformStateToLetters(state) {
   const dictionary = Object.values(state)
@@ -89,8 +89,8 @@ function getLetterCounts(line) {
   );
 }
 
-function sortByValues(dict) {
-  return Object.entries(dict)
-    .sort(([, a], [, b]) => b - a)
-    .reduce((acc, [key, val]) => ({ ...acc, [key]: val }), {});
-}
+// function sortByValues(dict) {
+//   return Object.entries(dict)
+//     .sort(([, a], [, b]) => b - a)
+//     .reduce((acc, [key, val]) => ({ ...acc, [key]: val }), {});
+// }
